@@ -7,7 +7,7 @@ class ViewCVButton extends StatelessWidget {
 
   Future<void> openCV() async {
     if (kIsWeb) {
-      final uri = Uri.parse('build/web/assets/assets/pdf/AbdallahCV.pdf');
+      final uri = Uri.parse('assets/pdf/AbdallahCV.pdf');
 
       final success = await launchUrl(uri, webOnlyWindowName: '_blank');
 

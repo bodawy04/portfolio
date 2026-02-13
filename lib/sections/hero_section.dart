@@ -15,6 +15,17 @@ class HeroSection extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              MediaQuery.of(context).size.width < 800
+                  ? Container(
+                      margin: EdgeInsets.only(bottom: 20),
+                      child: CircleAvatar(
+                        radius: 70,
+                        backgroundImage: AssetImage(
+                          'assets/images/Profile.JPG',
+                        ),
+                      ),
+                    )
+                  : Container(),
               Text(
                 "Abdallah Ahmed Elsayed",
                 style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
@@ -29,12 +40,12 @@ class HeroSection extends StatelessWidget {
             ],
           ),
         ),
-        MediaQuery.of(context).size.width > 600
+        MediaQuery.of(context).size.width > 800
             ? Expanded(
                 flex: 1,
-                child: ClipRRect(
-                  borderRadius: BorderRadiusGeometry.circular(500),
-                  child: Image.asset('assets/images/Profile.JPG', scale: 3),
+                child: CircleAvatar(
+                  radius: 100,
+                  backgroundImage: AssetImage('assets/images/Profile.JPG'),
                 ),
               )
             : Container(),

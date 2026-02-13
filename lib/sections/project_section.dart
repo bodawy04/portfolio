@@ -8,8 +8,8 @@ class ProjectsSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text("Projects", style: TextStyle(fontSize: 24)),
-        const SizedBox(height: 20),
+        Text("Projects", style: TextStyle(fontSize: 24)),
+        SizedBox(height: 20),
 
         ProjectCard(
           title: "Order Management System",
@@ -19,7 +19,7 @@ class ProjectsSection extends StatelessWidget {
           link: "https://github.com/bodawy04/OrderManagementSystem",
         ),
 
-        const SizedBox(height: 20),
+        SizedBox(height: 20),
 
         ProjectCard(
           title: "Movie App",
@@ -53,10 +53,10 @@ class ProjectCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(title, style: const TextStyle(fontSize: 18)),
-            const SizedBox(height: 8),
+            Text(title, style: TextStyle(fontSize: 18)),
+            SizedBox(height: 8),
             Text(description),
-            const SizedBox(height: 8),
+            SizedBox(height: 8),
             Text(link, style: const TextStyle(color: Colors.blue)),
           ],
         ),

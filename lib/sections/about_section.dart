@@ -5,7 +5,7 @@ class AboutSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text(
+    return Text(
       "Dedicated student who is passionate about software development. I strive to"
       " deepen my expertise through continuous learning and actively exploring"
       " different areas within the field to identify and cultivate my true interests."

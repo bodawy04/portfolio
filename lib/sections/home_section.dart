@@ -14,8 +14,8 @@ class HomeSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 40),
-        children: const [
+        padding: EdgeInsets.symmetric(horizontal: 24, vertical: 40),
+        children: [
           HeroSection(),
           SizedBox(height: 60),
           AboutSection(),

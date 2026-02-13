@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/download_cv_button.dart';
+import '../widgets/view_cv_button.dart';
 
 class HeroSection extends StatelessWidget {
   const HeroSection({super.key});
@@ -10,26 +10,34 @@ class HeroSection extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            Text(
-              "Abdallah Ahmed Elsayed",
-              style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 12),
-            Text(
-              "Software Developer",
-              style: TextStyle(fontSize: 18, color: Colors.grey),
-            ),
-            SizedBox(height: 24),
-            DownloadCVButton(),
-          ],
+        Expanded(
+          flex: 5,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Abdallah Ahmed Elsayed",
+                style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 12),
+              Text(
+                "Software Developer",
+                style: TextStyle(fontSize: 20, color: Colors.grey),
+              ),
+              SizedBox(height: 24),
+              ViewCVButton(),
+            ],
+          ),
         ),
-        ClipRRect(
-          borderRadius: BorderRadiusGeometry.circular(200),
-          child: Image.asset("images/Profile.JPG", scale: 3),
-        ),
+        MediaQuery.of(context).size.width > 600
+            ? Expanded(
+                flex: 1,
+                child: ClipRRect(
+                  borderRadius: BorderRadiusGeometry.circular(200),
+                  child: Image.asset('assets/images/Profile.JPG', scale: 3),
+                ),
+              )
+            : Container(),
       ],
     );
   }

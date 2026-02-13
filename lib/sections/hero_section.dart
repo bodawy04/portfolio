@@ -33,7 +33,7 @@ class HeroSection extends StatelessWidget {
             ? Expanded(
                 flex: 1,
                 child: ClipRRect(
-                  borderRadius: BorderRadiusGeometry.circular(200),
+                  borderRadius: BorderRadiusGeometry.circular(500),
                   child: Image.asset('assets/images/Profile.JPG', scale: 3),
                 ),
               )

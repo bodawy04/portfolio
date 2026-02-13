@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProjectsSection extends StatelessWidget {
   const ProjectsSection({super.key});
@@ -44,6 +45,15 @@ class ProjectCard extends StatelessWidget {
     required this.description,
     required this.link,
   });
+  Future<void> openLink(String url) async {
+    final uri = Uri.parse(url);
+    if (!await launchUrl(
+      uri,
+      webOnlyWindowName: '_blank', // new tab
+    )) {
+      throw Exception('Could not open $url');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +67,10 @@ class ProjectCard extends StatelessWidget {
             SizedBox(height: 8),
             Text(description),
             SizedBox(height: 8),
-            Text(link, style: const TextStyle(color: Colors.blue)),
+            InkWell(
+              onTap: () => openLink(link),
+              child: Text(link, style: const TextStyle(color: Colors.blue)),
+            ),
           ],
         ),
       ),

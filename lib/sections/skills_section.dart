@@ -33,7 +33,18 @@ class SkillsSection extends StatelessWidget {
     return Wrap(
       spacing: 12,
       runSpacing: 12,
-      children: skills.map((skill) => Chip(label: Text(skill))).toList(),
+      children: skills
+          .map(
+            (skill) => Container(
+              padding: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.white70, width: 0.8),
+                borderRadius: BorderRadiusGeometry.circular(50),
+              ),
+              child: Text(skill, style: TextStyle(color: Colors.white70)),
+            ),
+          )
+          .toList(),
     );
   }
 }

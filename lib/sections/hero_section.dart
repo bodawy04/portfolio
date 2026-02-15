@@ -1,9 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../widgets/view_cv_button.dart';
 
 class HeroSection extends StatelessWidget {
   const HeroSection({super.key});
+
+  Future<void> openLink(String url) async {
+    final uri = Uri.parse(url);
+    if (!await launchUrl(
+      uri,
+      webOnlyWindowName: '_blank', // new tab
+    )) {
+      throw Exception('Could not open $url');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +47,36 @@ class HeroSection extends StatelessWidget {
                 style: TextStyle(fontSize: 20, color: Colors.grey),
               ),
               SizedBox(height: 24),
-              ViewCVButton(),
+              Row(
+                children: [
+                  ViewCVButton(),
+                  SizedBox(width: 10),
+                  ElevatedButton(
+                    onPressed: () => openLink('https://github.com/bodawy04'),
+                    style: ElevatedButton.styleFrom(
+                      side: BorderSide(color: Colors.white70, width: 0.8),
+                      backgroundColor: Colors.transparent,
+                    ),
+                    child: Text(
+                      'GitHub',
+                      style: TextStyle(color: Colors.white70),
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  ElevatedButton(
+                    onPressed: () =>
+                        openLink('https://www.linkedin.com/in/abdallahnassar/'),
+                    style: ElevatedButton.styleFrom(
+                      side: BorderSide(color: Colors.white70, width: 0.8),
+                      backgroundColor: Colors.transparent,
+                    ),
+                    child: const Text(
+                      'LinkedIn',
+                      style: TextStyle(color: Colors.white70),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),

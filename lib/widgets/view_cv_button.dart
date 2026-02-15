@@ -7,13 +7,9 @@ class ViewCVButton extends StatelessWidget {
 
   Future<void> openCV() async {
     if (kIsWeb) {
-<<<<<<< HEAD
       final uri = Uri.parse(
         'https://drive.google.com/file/d/1H0zJAPST483ixpk2SLbaXbTBqv8ax7BQ/view?usp=drive_link',
       );
-=======
-      final uri = Uri.parse('https://drive.google.com/file/d/1H0zJAPST483ixpk2SLbaXbTBqv8ax7BQ/view?usp=drive_link');
->>>>>>> 9b708dbf0f5675ba8c1fd95e172fced4023235f9
 
       final success = await launchUrl(uri, webOnlyWindowName: '_blank');
 

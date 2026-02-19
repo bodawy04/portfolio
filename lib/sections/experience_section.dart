@@ -13,6 +13,7 @@ class ExperienceSection extends StatelessWidget {
 
         Text(
           "AI Trainer [Remote] – Outlier, San Francisco (February 2025 - August 2025)",
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
         Text(
           "• Generating Coding and Math prompts that would cause the model to fail\n"
@@ -21,6 +22,7 @@ class ExperienceSection extends StatelessWidget {
 
         Text(
           "Flutter Developer Intern [Remote] – NichePharma, Giza (September 2024 - October 2024)",
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
         Text(
           "• Collaborated in the development of TacitApp Pro and TacitApp Time Off\n"
@@ -30,6 +32,7 @@ class ExperienceSection extends StatelessWidget {
 
         Text(
           "Data Analysis Intern [On-Site] – EFG Holding, Giza (August 2024)",
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
         Text(
           "• Learned about Data Analysis basics\n"
@@ -38,6 +41,7 @@ class ExperienceSection extends StatelessWidget {
 
         Text(
           "Software Engineering Intern [Hybrid] – Raya IT, Cairo (July 2024 - August 2024)",
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
         Text(
           "• Learned about RPA and how to deal with UiPath and Orchestrator.\n"

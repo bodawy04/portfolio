@@ -30,21 +30,28 @@ class SkillsSection extends StatelessWidget {
       "Problem Solving",
     ];
 
-    return Wrap(
-      spacing: 12,
-      runSpacing: 12,
-      children: skills
-          .map(
-            (skill) => Container(
-              padding: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.white70, width: 0.8),
-                borderRadius: BorderRadiusGeometry.circular(50),
-              ),
-              child: Text(skill, style: TextStyle(color: Colors.white70)),
-            ),
-          )
-          .toList(),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text("Skills", style: TextStyle(fontSize: 24)),
+        SizedBox(height: 20),
+        Wrap(
+          spacing: 12,
+          runSpacing: 12,
+          children: skills
+              .map(
+                (skill) => Container(
+                  padding: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.white70, width: 0.8),
+                    borderRadius: BorderRadiusGeometry.circular(50),
+                  ),
+                  child: Text(skill, style: TextStyle(color: Colors.white70)),
+                ),
+              )
+              .toList(),
+        ),
+      ],
     );
   }
 }

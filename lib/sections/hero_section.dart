@@ -32,7 +32,7 @@ class HeroSection extends StatelessWidget {
                       child: CircleAvatar(
                         radius: 70,
                         backgroundImage: AssetImage(
-                          'assets/images/Profile.JPG',
+                          'assets/images/Profile.jpeg',
                         ),
                       ),
                     )
@@ -52,7 +52,8 @@ class HeroSection extends StatelessWidget {
                   ViewCVButton(),
                   SizedBox(width: 10),
                   ElevatedButton(
-                    onPressed: () => openLink('https://github.com/bodawy04'),
+                    onPressed: () =>
+                        openLink('https://github.com/abdallahnassarr'),
                     style: ElevatedButton.styleFrom(
                       side: BorderSide(color: Colors.white70, width: 0.8),
                       backgroundColor: Colors.transparent,
@@ -85,7 +86,7 @@ class HeroSection extends StatelessWidget {
                 flex: 1,
                 child: CircleAvatar(
                   radius: 100,
-                  backgroundImage: AssetImage('assets/images/Profile.JPG'),
+                  backgroundImage: AssetImage('assets/images/Profile.jpeg'),
                 ),
               )
             : Container(),
